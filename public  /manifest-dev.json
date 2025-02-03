@@ -1,0 +1,40 @@
+{
+  "identifier": "Janus-Pro-7B",
+  "api": [
+    {
+      "url": "https://api.siliconflow.cn/v1/images/generations",
+      "name": "Janus-Pro-7B",
+      "description": "Generate an image based on the given prompt using deepseek-ai/Janus-Pro-7B model",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "description": "The text prompt to generate the image from"
+          }
+        },
+        "required": ["prompt"]
+      }
+    }
+  ],
+  "gateway": "http://localhost:3400/api/gateway",
+  "meta": {
+    "avatar": "🎉",
+    "description": "This plugin uses deepseek-ai/Janus-Pro-7B model to generate images based on text prompts.",
+    "tags": ["image", "generator"],
+    "title": "Janus-Pro-7B Image Generator"
+  },
+  "settings": {
+    "type": "object",
+    "required": ["SILICONCLOUD_API_KEY"],
+    "properties": {
+      "SILICONCLOUD_API_KEY": {
+        "type": "string",
+        "title": "SiliconCloud API KEY",
+        "description": "The API key to use the deepseek-ai/Janus-Pro-7B model"
+      }
+    }
+  },
+  "version": "1",
+  "systemRole": "This plugin uses deepseek-ai/Janus-Pro-7B model to generate images based on text prompts."
+}
